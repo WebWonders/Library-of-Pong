@@ -1,0 +1,3 @@
+Congratulations on your download of Library-of-Pong!
+
+If you want to make a great Pong game without all the work and strain that HTML5 game development comes with, LoP is for you. LoP is free and open source, so you are free to fork it and make your own changes to suit your own personal programming style.
