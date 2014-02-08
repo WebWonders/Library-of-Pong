@@ -1,3 +1,9 @@
 Congratulations on your download of Library-of-Pong!
 
 If you want to make a great Pong game without all the work and strain that HTML5 game development comes with, LoP is for you. LoP is free and open source, so you are free to fork it and make your own changes to suit your own personal programming style.
+
+There are a few basic concepts behind LoP that are important to know. First, the Window() method creates a canvas in the HTML document. Second, the Paddle() function creates a paddle for you in the game.
+
+In the Window() method, there are several functions that can change the appearance or size of the canvas, load and stop the canvas, and more. The setStyles() function changes the background color, width, and height of the canvas; it takes the parameters backgroundColor, width, height. The setDisplay() function will change what type of display the canvas is (block, inline-block, or none); it takes the single parameter, canvasDisplay (which can be either block, inline-block, and none).
+
+To begin the game code itself, create an init() function that is called on the loading of the HTML body. Then, create a new window (like this: 'var window = new Window()') in the first year of your init() function. Finally, write 'var window.begin()' on the last line of your init() function. If, at any time in your game, the game must be paused, the window.stop() function will do the trick.
