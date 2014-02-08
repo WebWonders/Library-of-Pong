@@ -48,3 +48,33 @@ function Window() {
    
    
 } //end Window()
+
+function Paddle(window, width, height, xCoordinate, yCoordinate) {
+   this.canvas = window;
+   this.ctx = canvas.getContext('2d');
+   this.width = width;
+   this.height = height;
+   this.x = xCoordinate;
+   this.y = yCoordinate;
+   this.vx = 0;
+   this.vy = 0;
+   this.color = '#FFFFFF';
+   
+   this.draw = function() {
+      ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fill();
+   }
+   
+   this.setBackgroundColor = function(backgroundColor) {
+      this.color = backgroundColor;
+   }
+   
+   this.update = function(){
+    this.x += this.vx;
+    this.y += this.vy;
+    this.draw();
+  }
+
+}
