@@ -49,9 +49,9 @@ function Window() {
    
 } //end Window()
 
-function Paddle(window, width, height, xCoordinate, yCoordinate) {
-   this.canvas = window;
-   this.ctx = canvas.getContext('2d');
+function Paddle(gameWindow, width, height, xCoordinate, yCoordinate) {
+   this.canvas = gameWindow;
+   this.ctx = canas.getContext('2d');
    this.width = width;
    this.height = height;
    this.x = xCoordinate;
@@ -61,7 +61,7 @@ function Paddle(window, width, height, xCoordinate, yCoordinate) {
    this.color = '#FFFFFF';
    
    this.draw = function() {
-      ctx.beginPath();
+        ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fill();
@@ -77,4 +77,44 @@ function Paddle(window, width, height, xCoordinate, yCoordinate) {
     this.draw();
   }
 
-}
+} //end Paddle()
+
+function Ball(gameWindow, radius, minSpeed, maxSpeed) {
+   this.canvas = gameWindow;
+   this.centerCanvasX = canvas.width / 2;
+   this.centerCanvasY = canvas.height / 2;
+   this.ctx = canvas.getContext('2d');
+   this.radius = radius;
+   this.minSpeed = minSpeed;
+   this.maxSpeed = maxSpeed;
+   this.x = centerCanvasX;
+   this.y = centerCanvasY;
+   this.vx = 0;
+   this.vy = 0;
+   this.color = '#FFFFFF';
+   
+   this.draw = function() {
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    };
+    
+    this.setBackgroundColor = function(backgroundColor) {
+       this.color = backgroundColor;
+    }
+    
+    this.setX = function(newX) {
+       this.x = newX;
+    }
+    
+    this.setY = function(newY) {
+       this.y = newY;
+    }
+    
+    this.update = function() {
+       this.x += this.vx;
+       this.y += this.vy;
+       this.draw();
+    }
+} //end Ball()
