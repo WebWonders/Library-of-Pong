@@ -2,6 +2,8 @@ Congratulations on your download of Library-of-Pong!
 
 If you want to make a great Pong game without all the work and strain that HTML5 game development comes with, LoP is for you. LoP is free and open source, so you are free to fork it and make your own changes to suit your own personal programming style.
 
+One of the great features in LoP is that it has lots of built-in debugging tools! When you make certain errors in your game code when working with the various LoP functions, a note will appear in the debugger console of your browser when you run your game telling you what error you made, and how to fix it. The LoP debugging tools can catch many mistakes, but the rest are usually caught by the regular debugger in your browser.
+
 There are a few basic concepts behind LoP that are important to know. First, the Window() method creates a canvas in the HTML document. Second, the Paddle() function creates a paddle for you in the game.
 
 In the Window() method, there are several functions that can change the appearance or size of the canvas, load and stop the canvas, and more. The setStyles() function changes the background color, width, and height of the canvas; it takes the parameters backgroundColor, width, height. The setDisplay() function will change what type of display the canvas is (block, inline-block, or none); it takes the single parameter, canvasDisplay (which can be either block, inline-block, and none).
