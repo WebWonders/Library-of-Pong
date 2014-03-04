@@ -76,6 +76,18 @@ function Paddle(gameWindow, width, height, xCoordinate, yCoordinate) {
     this.y += this.vy;
     this.draw();
   }
+  
+  this.setSize = function(width, height) {
+     this.width = width;
+     this.height = height;
+     if (width === NaN) {
+       console.log("Width cannot be NaN. Use digits only. You entered: " + width);
+     }
+     if (height === NaN) {
+       console.log("Height cannot be NaN. Use digits only. You entered: " + height);
+     }
+   }
+  }
 
 } //end Paddle()
 
