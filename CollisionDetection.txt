@@ -1,0 +1,25 @@
+Unfortunately, LoP (Library-of-Pong) does not yet have support for collision detection.
+So, we have created a quick primer on how to make collision detection in your game.
+
+
+There are many ways to make collision detection; some are very complicated, others require lots of math, and others are fairly simple.
+Perhaps the simplest whay to detect collisions is to make a simple if/else statement checking to see if the .x and .y properties of one object are equal to the .x and .y properties of another object. However, this method isn't the best for a number of reasons.
+
+Here is a better method for collision between two balls:
+  ball1XSize = ball1.x + ball1.radius;
+  ball1YSize = ball1.y + ball1.radius;
+  ball2XSize = ball2.x + ball2.radius;
+  ball2YSize = ball2.y + ball2.radius;
+  if (ball1XSize === ball2XSize && ball1YSize === ball2YSize) {
+    //collision
+  }
+The above method is simply a slightly more complicated (and more accurate) version of the simplest method.
+Please note that the above method implies two objects that are balls called ball1 and ball2 with both the properties of x, y, and radius.
+
+Here is a method for use with non-circular shaped objects:
+  if (thing1.x + thing1.height + thing1.width === thing2.x + thing2.height + thing2.width && thing1.y + thing1.height + thing1.width === thing2.y + thing2.height + thing2.width) {
+    //collision
+  }
+Please note that the above method assumes two objects (one named thing1 and the other named thing2) with the properties of x, y, width, and height.
+
+Both of the two latter methods can be combined to make a collision detector for a paddle with a ball.
